@@ -1,5 +1,8 @@
 ## https://projecteuler.net/problem=8
 
+import time
+start_time = time.time()
+
 def productInSeq(seq, length = 4):
     max = 0
     for i in range(len(seq) - length + 1):
@@ -37,3 +40,5 @@ for seq in seqStrList:
     answer = max(answer, productInSeq(seq, 13))
 
 print(answer)
+
+print("Process finished --- %s seconds ---" % (time.time() - start_time))
